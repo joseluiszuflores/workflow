@@ -1,0 +1,9 @@
+name: my firts workflow
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: hello!
+        run: echo "Hola a todos desde ${{ github.workflow }} una workflow ${{github.event_name}}"
